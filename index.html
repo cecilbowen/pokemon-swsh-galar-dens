@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pokemon Interactive Galar Den Map</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://assets.pokemon.com/assets/cms2/img/pokedex/full/419.png">
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin=""/>
+</head>
+
+<body>
+  <!-- User Filter/Options -->
+  <div id="userOptions">
+	  <input type="text" list="pkAutoComplete" id="findDenBlank" placeholder="Enter Pokemon/Den" />
+	  <datalist id="pkAutoComplete"></datalist>
+	  <button type="button" id="findDen">Find Den</button>
+	  <button type="button" id="clearFilter">Clear Filter</button>
+	  <select id="mapType">
+      <option selected value="numbers">Den Map (w/ Numbers)</option>
+      <option value="raw">Den Map (Raw)</option>
+      <option value="gmax">Den Map (w/ Gigantamax)</option>
+	  </select>
+  </div>
+
+  <!-- Actual Interactive Map -->
+  <div id="mapAndDesc">
+	<div id="mapid" class="den-map"></div>
+	<div id="denDesc"></div>
+  </div>
+  
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+</body>
+
+</html>
